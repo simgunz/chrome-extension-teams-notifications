@@ -3,6 +3,7 @@
   "name": "Microsoft Teams Notification Sound",
   "description": "Plays a sound when a Microsoft Teams notification is shown.",
   "version": "1.0",
+  "author": "Simone Gaiarin",
   "icons": {
     "128": "icons/icon.png"
   },
