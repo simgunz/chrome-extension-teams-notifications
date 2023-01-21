@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Microsoft Teams Notification Sound",
-  "description": "Add sounds to Microsoft Teams PWA notifications.",
+  "name": "Teams Notification Sound",
+  "description": "Add sounds to Teams PWA notifications.",
   "version": "1.0.1",
   "author": "Simone Gaiarin",
   "icons": {
