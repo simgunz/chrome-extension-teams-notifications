@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Microsoft Teams Notification Sound Extension Options</title>
+
+  <style>
+    .description {
+      color: gray;
+      font-size: smaller;
+    }
+
+    #saveButton {
+      margin-top: 1rem;
+    }
+
+    .checkbox-option {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .checkbox-option>div:first-child {
+      margin-right: .5rem;
+    }
+
+    #statusMessage {
+      display: inline;
+      margin-top: 1rem;
+      margin-left: 1rem;
+    }
+
+    button {
+      font-size: large;
+      padding: .25em .5em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Microsoft Teams Notification Sound - options</h1>
+
+  <div class="checkbox-option">
+    <div>
+      <input id="minimizeWindow" type="checkbox" value="1">
+    </div>
+    <div>
+      <label for="minimizeWindow">
+        Minimize Teams window if not active
+        <div class="description">If not minimized, Teams doesn't send notifications for current (selected) chat. If
+          checked, the Teams window will be minimized only if it contains no other tab.</div>
+      </label>
+    </div>
+  </div>
+
+  <button id="saveButton">Save</button>
+
+  <div id="statusMessage"></div>
+
+  <script src="options.js"></script>
+</body>
+
+</html>

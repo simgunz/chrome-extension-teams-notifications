@@ -13,6 +13,14 @@
       "matches": ["https://teams.microsoft.com/*", "http://localhost/*"]
     }
   ],
+  "background": {
+    "service_worker": "scripts/service-worker.js"
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "options_page": "options/options.html",
   "web_accessible_resources": [
     {
       "resources": [
