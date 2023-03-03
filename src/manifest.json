@@ -9,10 +9,14 @@
   },
   "content_scripts": [
     {
-      "js": ["scripts/content.js"],
+      "js": ["scripts/default-options.js", "scripts/content.js"],
       "matches": ["https://teams.microsoft.com/*", "http://localhost/*"]
     }
   ],
+  "permissions": [
+    "storage"
+  ],
+  "options_page": "options/options.html",
   "web_accessible_resources": [
     {
       "resources": [

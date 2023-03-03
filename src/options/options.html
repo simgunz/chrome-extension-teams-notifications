@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Microsoft Teams Notification Sound Extension Options</title>
+
+  <style>
+    body {
+      margin-left: 1rem;
+    }
+    .description {
+      color: gray;
+      font-size: smaller;
+    }
+
+    #saveButton {
+      margin-top: 1rem;
+    }
+
+    .checkbox-option {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      font-size: 125%;
+    }
+
+    .checkbox-option:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    .checkbox-option>div:first-child {
+      margin-right: .5rem;
+      padding-top: 2px;
+    }
+
+    #statusMessage {
+      display: inline;
+      margin-top: 1rem;
+      margin-left: 1rem;
+    }
+
+    button {
+      font-size: large;
+      padding: .25em .5em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Microsoft Teams Notification Sound - options</h1>
+
+  <div class="checkbox-option">
+    <div>
+      <input id="playNotificationSound" type="checkbox" value="1">
+    </div>
+    <div>
+      <label for="playNotificationSound">
+        Play sound when Teams creates a notification
+        <div class="description">Teams PWA doesn't support notification sounds on Linux even if it has such option in its settings. This option fixes it.</div>
+      </label>
+    </div>
+  </div>
+
+  <button id="saveButton">Save</button>
+
+  <div id="statusMessage"></div>
+
+  <script src="../scripts/default-options.js"></script>
+  <script src="options.js"></script>
+</body>
+
+</html>

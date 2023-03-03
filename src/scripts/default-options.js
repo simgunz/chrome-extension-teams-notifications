@@ -1,0 +1,3 @@
+const defaultOptions = { 
+  playNotificationSound: true
+};
