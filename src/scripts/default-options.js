@@ -1,3 +1,4 @@
 const defaultOptions = { 
-  playNotificationSound: true
+  playNotificationSound: true,
+  switchToActivityViewOnBlur: true
 };
