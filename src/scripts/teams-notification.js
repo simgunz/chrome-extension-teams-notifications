@@ -14,12 +14,19 @@ function playNotificationSound() {
 }
 
 function extend(cls) {
-  function new_constructor(...args) {
-    playNotificationSound();
-    new cls(...args);
+  class Wrapper extends cls {
+    constructor(...args) {
+      super(...args);
+      playNotificationSound();
+    }
+    get onclick() {
+      return super.onclick;
+    }
+    set onclick(value) {
+      super.onclick = value;
+    }
   }
-  new_constructor.prototype = Object.create(cls.prototype);
-  return new_constructor;
+  return Wrapper;
 }
 
 window.addEventListener("message", (event) => {
