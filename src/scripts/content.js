@@ -25,11 +25,12 @@ const createFocusLostHandler = windowId => () => {
     setTimeout(() => {
       if (!document.hasFocus()) {
         // Don't switch to New Chat if there is a call is running
-        const hangupButton = top.document.querySelector('iframe.embedded-page-content').contentDocument.getElementById('hangup-button');
+        const hangupElement = top.document.querySelector('iframe.embedded-page-content');
+        const hangupButton = hangupElement ? hangupElement.contentDocument.getElementById('hangup-button') : null;
         if (!hangupButton) {
-          const buttonNewChat = top.document.querySelector('[title="Nuova chat (Alt+N)"]');
+          const buttonNewChat = top.document.querySelector('[data-tid="lr-create-chat"]');
           if(buttonNewChat){
-            const elemNewChat = document.querySelector('[data-tid="chat-li-entry-with-Nuova chat"]');
+            const elemNewChat = document.querySelector('.cle-new');
             if(elemNewChat){
               console.log('element newChat already present, no need to do nothing');
             } else {
