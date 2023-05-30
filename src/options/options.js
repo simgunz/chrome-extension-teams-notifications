@@ -1,7 +1,8 @@
 // Saves options to chrome.storage
 function saveOptions() {
   const options = {
-    playNotificationSound: document.getElementById('playNotificationSound').checked
+    playNotificationSound: document.getElementById('playNotificationSound').checked,
+    switchToActivityViewOnBlur: document.getElementById('switchToActivityViewOnBlur').checked
   };
 
   console.log('Options to be saved', options);
@@ -21,6 +22,7 @@ function restoreOptions() {
     options => {
       console.log('Options from storage or defaults', options);
       document.getElementById('playNotificationSound').checked = Boolean(options.playNotificationSound);
+      document.getElementById('switchToActivityViewOnBlur').checked = Boolean(options.switchToActivityViewOnBlur);
     });
 }
 
